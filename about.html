@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Porsche</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* navbar start */
+        #navbarNav {
+            text-align: center;
+        }
+
+        .navbar-nav .nav-link {
+            margin-right: 10px;
+        }
+
+        .scrollable-dropdown {
+            max-height: 550px;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        /* navbar end */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-size: 100% 50px;
+            background-color: white;
+            font-family: Helvetica, sans-serif;
+        }
+
+        h1 {
+            margin-top: 100px;
+
+        }
+
+        h2,
+        h3 {
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h5 {
+            font-weight: bold;
+
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        /* The actual timeline (the vertical ruler) */
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #d5001c;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+
+        /* Container around content */
+        .ball {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            margin-bottom: 20px;
+        }
+
+        /* The circles on the timeline */
+        .ball:after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            right: -17px;
+            background-color: #d6001d;
+            border: 4px solid #585753;
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        /* Place the container to the left */
+        .left {
+            left: 0;
+        }
+
+        /* Place the container to the right */
+        .right {
+            left: 50%;
+        }
+
+        /* Add arrows to the left container (pointing right) */
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            border: medium solid white;
+            border-width: 10px 0 10px 10px;
+            border-color: transparent transparent transparent white;
+        }
+
+        /* Add arrows to the right container (pointing left) */
+        .right::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            left: 30px;
+            border: medium solid white;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 20px 30px;
+            background-color: #d5001c;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+
+            /* Place the timelime to the left */
+            .timeline::after {
+                left: 31px;
+            }
+        }
+
+        /* Full-width containers */
+        .ball {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .ball::before {
+            left: 60px;
+            border-width: 10px 10px 10px 0;
+            border-color: transparent white transparent transparent;
+        }
+
+        /* Fix the circle for containers on the right side */
+        .right::after {
+            left: -16px;
+        }
+
+        /* The actual content */
+        .content {
+            padding: 5px 30px;
+            background-color: white;
+            position: relative;
+            border-radius: 6px;
+        }
+
+        /* Media queries - Responsive timeline on screens less than 600px wide */
+        @media screen and (max-width: 600px) {
+            .timeline .container img {
+                width: 90px;
+                height: 90px;
+            }
+        }
+
+        .timeline .ball img {
+            width: 60px;
+            height: 90px;
+            border-radius: 10%;
+        }
+
+        /* Place the timelime to the left */
+        .timeline::after {
+            left: 31px;
+        }
+
+        /* Full-width containers */
+        .ball {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        /* Make sure that all arrows are pointing leftwards */
+        .ball::before,
+        .ball::after {
+            left: 18px;
+        }
+
+        /* Make all right containers behave like the left ones */
+        .right {
+            left: 0%;
+        }
+
+        .box {
+            border: black 2px solid;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: white;
+        }
+
+        .section {
+            background-color: rgb(236, 232, 232);
+        }
+
+        .chart-container {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Navbar start -->
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+        <div class="container">
+            <a href="home.html" class="navbar-brand mb-0 h3 d-flex align-items-center">
+                <img class="d-inline-block" src="pics/logo1.png" width="170px" height="80px" alt="Porsche Logo" />
+            </a>
+            <button type="button" data-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown mr-3">
+                        <a href="#" class="nav-link active dropdown-toggle" id="navbardropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Models
+                        </a>
+                        <!-- Pictures dropdown start -->
+                        <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="navbardropdown">
+                            <li>
+                                <a href="718.html" class="dropdown-item">
+                                    <img src="pics/dropdown/718logo.jpeg" alt="Porsche 718" width="200" height="100">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="911.html" class="dropdown-item">
+                                    <img src="pics/dropdown/911logo.jpeg" alt="Porsche 911" width="196" height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="taycan.html" class="dropdown-item">
+                                    <img src="pics/dropdown/taycanlogo.jpeg" alt="Porsche Taycan" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="panamera.html" class="dropdown-item">
+                                    <img src="pics/dropdown/panameralogo.jpeg" alt="Porsche Panamera" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="macan.html" class="dropdown-item">
+                                    <img src="pics/dropdown/macanlogo.jpeg" alt="Porsche Macan" width="196" height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="cayenne.html" class="dropdown-item">
+                                    <img src="pics/dropdown/cayennelogo.jpeg" alt="Porsche Cayenne" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Pictures dropdown end -->
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="service.html" class="nav-link active">Service</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="dealer.html" class="nav-link active">Find a Dealer</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="news.html" class="nav-link active">News</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+
+    <!-- Page Content start-->
+    <div class="section">
+
+        <div class="container mt-5">
+            <h1 class="text-center font-weight-bold">About Us</h1>
+            <hr>
+            <div class="box">
+                <!-- Mission Section -->
+                <h3 class="section-header">Our Mission</h3>
+                <p class="section-description">At Porsche, our mission is to create extraordinary sports cars that
+                    inspire a
+                    passion for driving. We strive to push the boundaries of automotive engineering and design,
+                    delivering
+                    unparalleled performance, innovation, and driving pleasure to our customers.</p>
+            </div>
+            <!-- Vision Section -->
+            <div class="box">
+                <h3 class="section-header">Our Vision</h3>
+                <p class="section-description">Our vision is to be the leading global luxury sports car manufacturer,
+                    celebrated
+                    for our unrivaled performance, timeless design, and engineering excellence. We envision a world
+                    where
+                    Porsche cars are synonymous with driving enjoyment and admired for their craftsmanship and
+                    technological
+                    advancements.</p>
+            </div>
+            <!-- History Section -->
+            <div class="box">
+                <h3 class="section-header">Our History</h3>
+                <p class="section-description">With a rich heritage dating back to 1948, Porsche has a remarkable
+                    history of
+                    automotive excellence. It all began when Ferdinand Porsche, a visionary engineer, founded the
+                    company and
+                    introduced the iconic Porsche 356. Since then, we have continued to innovate and create legendary
+                    sports
+                    cars that have left an indelible mark on the automotive industry. From the legendary 911 to the
+                    groundbreaking Taycan, each Porsche model represents the perfect balance of performance, luxury, and
+                    craftsmanship.</p>
+            </div>
+            <!-- Core Values Section -->
+            <div class="box">
+                <h3 class="section-header">Our Core Values</h3>
+                <ul class="section-description">
+                    <li>Performance</li>
+                    <li>Innovation</li>
+                    <li>Quality</li>
+                    <li>Heritage</li>
+                    <li>Exclusivity</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Page Content end -->
+
+    <!-- Team Members Section -->
+    <h3 class="section-header text-center font-weight-bold">Our Team Members</h3>
+    <div class="row">
+        <div class="col-md-4">
+            <img src="pics/about/ceo.jpg" alt="CEO" class="img-thumbnail">
+            <h5 class="team-member-name font-weight-bold">Oliver Blume</h5>
+            <p class="team-member-role font-italic">CEO</p>
+        </div>
+        <div class="col-md-4">
+            <img src="pics/about/coo.jpeg" alt="COO" class="img-thumbnail">
+            <h5 class="team-member-name font-weight-bold">Lutz Meschke</h5>
+            <p class="team-member-role font-italic">COO</p>
+        </div>
+        <div class="col-md-4">
+            <img src="pics/about/cto.jpeg" alt="CTO" class="img-thumbnail">
+            <h5 class="team-member-name font-weight-bold">Michael Steiner</h5>
+            <p class="team-member-role font-italic">CTO</p>
+        </div>
+    </div>
+    <!-- Team Members end -->
+
+    <!-- Achievements start -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <h3 class="text-center">Achievements</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Achievement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2010</td>
+                            <td>Received the Automotive Excellence Award</td>
+                        </tr>
+                        <tr>
+                            <td>2012</td>
+                            <td>Ranked #1 in Luxury Car Sales</td>
+                        </tr>
+                        <tr>
+                            <td>2015</td>
+                            <td>Introduced the Revolutionary XYZ Technology</td>
+                        </tr>
+                        <tr>
+                            <td>2018</td>
+                            <td>Expanded to 50 Countries Worldwide</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-lg-6">
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Achievements end -->
+
+    <!-- awards start -->
+    <h3>Awards</h3>
+    <div class="row">
+        <div class="col-md-4 ">
+            <img src="pics/about/award1.jpeg" alt="Gallery 1" class="img-thumbnail">
+            <h5>Passion</h5>
+            <p style="font-style: italic;">Recognizing unwavering dedication and enthusiasm.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="pics/about/award2.jpeg" alt="Gallery 2" class="img-thumbnail ">
+            <h5>Precision</h5>
+            <p style="font-style: italic;">Honoring meticulous and accurate work.</p>
+        </div>
+        <div class="col-md-4">
+            <img src="pics/about/award3.jpeg" alt="Gallery 3" class="img-thumbnail">
+            <h5>Perseverance</h5>
+            <p style="font-style: italic;">Celebrating resilience in overcoming challenges.</p>
+        </div>
+    </div>
+    <!-- timeline ends -->
+
+    <!-- timeline start -->
+    <h3 class="section-header text-center">Evolution of Leadership</h3>
+    <div class="timeline">
+        <div class="ball left">
+            <div class="content">
+                <h2><img src="pics/about/ceo1.jpeg" alt="Event 1">Ferdinand Porsche</h2>
+                <span class="time-right font-italic">1950 - 1951</span>
+                <p>The visionary behind iconic Porsche models like the 911 and the Volkswagen Beetle. His engineering
+                    brilliance and passion for performance laid the foundation for Porsche's legendary heritage.</p>
+            </div>
+        </div>
+
+        <div class="ball left">
+            <div class="content">
+                <h2><img src="pics/about/ceo3.jpeg" alt="Event 3">Wendelin Wiedeking</h2>
+                <span class="time-right font-italic">1993 - 2009</span>
+                <p>A mastermind of business and innovation, Wiedeking transformed Porsche into a global powerhouse. His
+                    relentless pursuit of excellence and business acumen drove Porsche to new heights, solidifying its
+                    position as a premier luxury sports car brand.</p>
+            </div>
+        </div>
+        <div class="ball right">
+            <div class="content">
+                <h2><img src="pics/about/ceo2.jpg" alt="Event 2">Oliver Blume</h2>
+                <span class="time-left font-italic">2015 - present</span>
+                <p>A driving force behind Porsche's modern success, Blume is a true leader. With his strategic vision,
+                    he spearheaded the development of groundbreaking electric models, ensuring Porsche's commitment to
+                    innovation and sustainability.</p>
+            </div>
+        </div>
+    </div>
+    <!-- timeline end -->
+</body>
+
+</html>
+
+<!-- Bootstrap scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4L6+5gx5q0Jd6gMDxwEpv"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpC4RtFq6bZNbFTgFq7b1y2z+/99aAi4e8Le/CrCk7YN3DdGcd1M6d5t5B"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+Q3b0q6"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.0/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Chart.js code
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['2010', '2012', '2015', '2018'],
+            datasets: [{
+                label: 'Achievements',
+                data: [2, 6, 3, 4],
+                backgroundColor: '#d5001c',
+                borderColor: '#a19e9e',
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+</script>
+
+</body>
+
+</html>

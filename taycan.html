@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche</title>
+    <link rel="stylesheet" type="text/css" href="overview.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body style="height: 2000px">
+    <!-- php connector check -->
+    <?php
+        phpinfo();
+        ?>
+    <!-- end check -->
+
+    <!-- Navbar start -->
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+        <div class="container">
+            <a href="home.html" class="navbar-brand mb-0 h3 d-flex align-items-center">
+                <img class="d-inline-block" src="pics/logo1.png" width="170px" height="80px" alt="Porsche Logo" />
+            </a>
+            <button type="button" data-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown mr-3">
+                        <a href="#" class="nav-link active dropdown-toggle" id="navbardropdown" role="button"
+                            data-toggle="dropdown" aria-expanded="false">
+                            Models
+                        </a>
+                        <!-- Pictures dropdown start -->
+                        <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="navbardropdown">
+                            <li>
+                                <a href="718.html" class="dropdown-item">
+                                    <img src="pics/dropdown/718logo.jpeg" alt="Porsche 718" width="200" height="100">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="911.html" class="dropdown-item">
+                                    <img src="pics/dropdown/911logo.jpeg" alt="Porsche 911" width="196" height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="taycan.html" class="dropdown-item">
+                                    <img src="pics/dropdown/taycanlogo.jpeg" alt="Porsche Taycan" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="panamera.html" class="dropdown-item">
+                                    <img src="pics/dropdown/panameralogo.jpeg" alt="Porsche Panamera" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="macan.html" class="dropdown-item">
+                                    <img src="pics/dropdown/macanlogo.jpeg" alt="Porsche Macan" width="196" height="90">
+                                </a>
+                            </li>
+                            <hr>
+                            <li>
+                                <a href="cayenne.html" class="dropdown-item">
+                                    <img src="pics/dropdown/cayennelogo.jpeg" alt="Porsche Cayenne" width="196"
+                                        height="90">
+                                </a>
+                            </li>
+                        </ul>
+                        <!-- Pictures dropdown end -->
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="service.html" class="nav-link active">Service</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="about.html" class="nav-link active">About Us</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="dealer.html" class="nav-link active">Find a Dealer</a>
+                    </li>
+                    <li class="nav-item active mr-10">
+                        <a href="news.html" class="nav-link active">News</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar ends here -->
+
+    <!-- light gray overview containe start -->
+    <div class="container-gray">
+        <h1>Porsche Taycan | Overview</h1>
+    </div>
+    <!-- light gray overview container end -->
+
+    <!-- filter start -->
+    <div class="filter-section">
+        <h2>Model Overview</h2>
+        <div class="filter-category">
+            <p class="category-title">Models</p>
+
+            <div class="filter-option">718</div>
+            <div class="filter-option">911</div>
+            <div class="filter-option">Taycan</div>
+            <div class="filter-option">Panamera</div>
+            <div class="filter-option">Macan</div>
+            <div class="filter-option">Cayenne</div>
+        </div>
+        <div class="filter-category">
+            <p class="category-title">Body Design</p>
+            <div class="filter-option">Coupe</div>
+            <div class="filter-option">Cabriolet</div>
+            <div class="filter-option">Targa</div>
+            <div class="filter-option">Roadster</div>
+            <div class="filter-option">SUV</div>
+            <div class="filter-option">Sports Saloon</div>
+            <div class="filter-option">Executive</div>
+            <div class="filter-option">Sport Turismo</div>
+            <div class="filter-option">Cross Turismo</div>
+        </div>
+        <div class="filter-category">
+            <p class="category-title">Transmission</p>
+            <div class="filter-option">Manual</div>
+            <div class="filter-option">Tiptronic</div>
+            <div class="filter-option">PDK</div>
+             <div class="filter-option">2-speed transmission</div>
+        </div>
+        <div class="filter-category">
+            <p class="category-title">Seats</p>
+            <div class="filter-option">2</div>
+            <div class="filter-option">4 - 5</div>
+        </div>
+        <div class="filter-category slideable">
+            <p class="category-title">Power</p>
+            <div class="filter-option">265</div>
+            <div class="filter-option">762</div>
+        </div>
+    </div>
+
+    <!-- filter end -->
+
+    <!-- seperate stripe start -->
+    <div class="vertical-stripe"></div>
+    <!-- seperate stripe end -->
+
+    <!-- models start -->
+    <div class="models-section">
+        <h1>&gt; Taycan Models</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="model">
+                    <img src="pics/overview/taycan/taycan.jpeg" alt="Model 1">
+                    <p class="model-name">Taycan</p>
+                    <p class="model-price">from €100,000</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="model">
+                    <img src="pics/overview/taycan/taycan-sport-turismo.jpeg" alt="Model 2">
+                    <p class="model-name">Taycan Sport Turismo</p>
+                    <p class="model-price">from €100,00</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="model">
+                    <img src="pics/overview/taycan/taycan-4s.jpeg" alt="Model 4">
+                    <p class="model-name">Taycan 4S</p>
+                    <p class="model-price">from €100,100.</p>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <!-- models end -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>

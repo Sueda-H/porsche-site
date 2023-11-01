@@ -1,0 +1,217 @@
+/* navbar start */
+#navbarNav {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 10px;
+}
+/* navbar end */
+
+/* lightgray overwiev container start */
+.container-gray {
+    background-color: #eff0f1;
+    padding: 20px;
+}
+
+.container-gray h1 {
+    color: black;
+    font-size: 24px;
+    margin: 0;
+}
+/* lightgray overwiev container end */
+
+/* filter start */
+.filter-section {
+    float: left;
+    width: 200px;
+}
+
+.filter-section h2 {
+    font-size: 18px;
+}
+
+.filter-category {
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.filter-option {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    margin-bottom: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.filter-option:hover {
+    border-color: #f00;
+    color: #f00;
+}
+
+.filter-option.active {
+    background-color: #333;
+    color: #fff;
+}
+
+.filter-option.active:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.filter-option.active:before {
+    content: 'x ';
+}
+
+.filter-option:hover:before,
+.filter-option.active:before {
+    content: '+ ';
+    color: #f00;
+}
+
+.filter-option.active:hover:before {
+    content: '';
+}
+/* filter end */
+
+/* seperate stripe start */
+.vertical-stripe {
+    width: 2px;
+    height: 100%;
+    background-color:#e3e4e4;
+    margin-left: 220px;
+    float: left;
+}
+/* seperate stripe end */
+
+/* models start */
+.models-section {
+    text-align: center;
+}
+
+.model-container {
+    display: flex;
+    justify-content: center;
+}
+
+.model {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.model img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
+
+.model-name,
+.model-price {
+    margin: 5px 0;
+}
+
+/* models end */
+
+/* gray bar start */
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #a19e9e;
+    padding: 20px;
+}
+
+.contact-section {
+    flex-basis: 45%;
+    margin-right: 50px;
+    margin-left: 90px;
+}
+
+.opening-hours-section {
+    flex-basis: 50%;
+    margin-left: 20px;
+}
+
+.socials-section {
+    margin-top: 20px;
+}
+
+.box h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin: 5px 0;
+}
+
+.box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.box ul li {
+    margin-bottom: 5px;
+}
+
+.box ul li a {
+    color: #242222c2;
+    text-decoration: none;
+}
+
+.box ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.social-icon {
+    color: #0a0808;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #000;
+}
+/* gray bar end */
+
+/* footer start */
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+/* footer end */
+
+body {
+    padding-top: 100px;
+    font-family: "porsche_next", sans-serif;
+    font-size: 16px;
+}
+
+.container-fluid {
+    background-color: #eff0f2;
+    color: black;
+    /* Set text color to white */
+    padding: 5px;
+    /* Add some padding for content */
+}
+
+@font-face {
+    font-family: "porsche_next";
+    src: url(path/to/porsche_next.woff2) format("woff2"),
+        url(path/to/porsche_next.woff) format("woff");
+}

@@ -1,0 +1,48 @@
+/* navbar start */
+#navbarNav {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 10px;
+}
+
+.scrollable-dropdown {
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* navbar end */
+
+
+
+img #foto1{
+    width: 20px;
+  }
+/* Add padding to the top of the content to avoid overlap with the fixed navbar */
+.article-content {
+    padding-top: 20px;
+    /* Adjust the value as needed to ensure the title is visible */
+}
+
+/* Rest of the CSS code remains the same */
+h1 {
+    font-size: 2.5rem;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.article-content {
+	font-family: 'proxima-nova', sans-serif;
+    text-align: left;
+}
+
+/* Make the size of the images smaller */
+.img-fluid {
+    max-width: 30px;
+    height: auto;
+    border-radius: 10px;
+    width: 500px;
+
+}

@@ -1,0 +1,116 @@
+/* navbar start */
+#navbarNav {
+    text-align: center;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 10px;
+}
+.scrollable-dropdown {
+  max-height: 550px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* navbar end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Import Font Awesome CSS */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+/* dealer end */
+
+/* gray bar start */
+.box {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #a19e9e;
+    padding: 20px;
+  }
+  
+  .contact-section {
+    flex-basis: 45%;
+    margin-right: 50px;
+    margin-left: 90px;
+  }
+  
+  .opening-hours-section {
+    flex-basis: 50%;
+    margin-left: 20px;
+  }
+  
+  .socials-section {
+    margin-top: 20px;
+  }
+  
+  .box h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .box p {
+    margin: 5px 0;
+  }
+  
+  .box ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .box ul li {
+    margin-bottom: 5px;
+  }
+  
+  .box ul li a {
+    color: #242222c2;
+    text-decoration: none;
+  }
+  
+  .box ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-media-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .social-icon {
+    color: #0a0808;
+    font-size: 18px;
+    margin-right: 10px;
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    color: #000;
+  }
+  
+  /* gray bar end */
+
+  /* footer start */
+  .footer {
+    background-color: black;
+    color: white;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .footer p {
+    margin-bottom: 0;
+  }
+/* footer end */

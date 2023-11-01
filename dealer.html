@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Find a Dealer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://kit.fontawesome.com/b09c09de6f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="dealer.css">
+</head>
+
+<body style="height: 100px">
+  <!-- Navbar start -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+    <div class="container">
+      <a href="home.html" class="navbar-brand mb-0 h3 d-flex align-items-center">
+        <img class="d-inline-block" src="pics/logo1.png" width="170px" height="80px" alt="Porsche Logo" />
+      </a>
+      <button type="button" data-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link active dropdown-toggle" id="navbardropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Models
+            </a>
+            <!-- Pictures dropdown start -->
+            <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="navbardropdown">
+              <li>
+                <a href="718.html" class="dropdown-item">
+                  <img src="pics/dropdown/718logo.jpeg" alt="Porsche 718" width="200" height="100">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="911.html" class="dropdown-item">
+                  <img src="pics/dropdown/911logo.jpeg" alt="Porsche 911" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="taycan.html" class="dropdown-item">
+                  <img src="pics/dropdown/taycanlogo.jpeg" alt="Porsche Taycan" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="panamera.html" class="dropdown-item">
+                  <img src="pics/dropdown/panameralogo.jpeg" alt="Porsche Panamera" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="macan.html" class="dropdown-item">
+                  <img src="pics/dropdown/macanlogo.jpeg" alt="Porsche Macan" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="cayenne.html" class="dropdown-item">
+                  <img src="pics/dropdown/cayennelogo.jpeg" alt="Porsche Cayenne" width="196" height="90">
+                </a>
+              </li>
+            </ul>
+            <!-- Pictures dropdown end -->
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="service.html" class="nav-link active">Service</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="about.html" class="nav-link active">About Us</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="dealer.html" class="nav-link active">Find a Dealer</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="news.html" class="nav-link active">News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar ends here -->
+  <h1>Map</h1>
+
+  <div id="map"></div>
+  <!-- gray box start -->
+
+  <div class="box">
+    <div class="contact-section">
+      <h3>Contact Us</h3>
+      <p>Phone:  +44 3457 911 911</p>
+      <p>Email: contact@porsche.co.uk</p>
+      <p>
+        Porsche Cars UK<br>
+        83 Piccadilly<br>
+        London W1J 8JA<br>
+        United Kingdom
+      </p>
+    </div>
+    <div class="opening-hours-section">
+      <h3>Standard Opening Hours</h3>
+      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+      <p>Saturday: 10:00 AM - 4:00 PM</p>
+      <p>Sunday: Closed</p>
+      <div class="socials-section">
+        <h3>Socials</h3>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/Porsche" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/Porsche" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/porsche/" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/porsche/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/user/Porsche" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.pinterest.com/porsche/" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <a href="https://www.snapchat.com/add/porsche" class="social-icon"><i class="fab fa-snapchat"></i></a>
+          <a href="https://www.tiktok.com/@porsche" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- gray box end -->
+
+  <!-- footer start-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2023 Porsche. All rights reserved. | Privacy
+            Policy | Terms of Service</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+
+
+  <!-- dealers database start -->
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script>
+    var dealers = [
+      {
+        name: "Porsche Centrum Amsterdam",
+        latitude: 52.327082,
+        longitude: 4.933867,
+        address: "Sijsjesbergweg 50",
+        city: "Amsterdam Zuidoost",
+        country: "The Netherlands",
+        postal_code: "1105 AL",
+        phone: "020 - 4 911 911",
+        email: "info@porschecentrumamsterdam.nl"
+      },
+      {
+        name: "Porsche Centrum Eindhoven",
+        latitude: 51.503568,
+        longitude: 5.314950,
+        address: "De Scheper 305",
+        city: "Oirschot",
+        country: "The Netherlands",
+        postal_code: "5688 HP",
+        phone: "088 - 8 911 911",
+        email: "info@porschecentrumeindhoven.nl"
+      },
+      {
+        name: "Porsche Centrum Gelderland",
+        latitude: 51.953137,
+        longitude: 5.767588,
+        address: "Ressenerbroek 2",
+        city: "Heteren",
+        country: "The Netherlands",
+        postal_code: "6666 MR",
+        phone: "+31 (0)26 356 0 911",
+        email: "info@porschecentrumgelderland.nl"
+      },
+      {
+        name: "Porsche Zentrum Stuttgart",
+        latitude: 48.817819,
+        longitude: 9.163671,
+        address: "Siemensstraße 2",
+        city: "Stuttgart",
+        country: "Germany",
+        postal_code: "70469",
+        phone: "+ 49 711 99 523-911",
+        email: "info.stuttgart@porsche-stuttgart.de"
+      },
+      {
+        name: "Porsche Zentrum Dusseldorf",
+        latitude: 51.262646,
+        longitude: 6.795767,
+        address: "Klaus-Bungert-Straße 2",
+        city: "Dusseldorf",
+        country: "Germany",
+        postal_code: "40468",
+        phone: "+49 211 5260-911",
+        email: "info@porsche-duesseldorf.de"
+      },
+      {
+        name: "Porsche Zentrum Frankfurt",
+        latitude: 50.124555,
+        longitude: 8.699940,
+        address: "Hanauer Landstraße 220 a",
+        city: "Frankfurt",
+        country: "Germany",
+        postal_code: "60314",
+        phone: "+49 694 05881-0",
+        email: "info@porsche-frankfurt.de"
+      },
+      {
+        name: "Porsche Centrum Brussels",
+        latitude: 50.799514,
+        longitude: 4.315850,
+        address: "Grote Baan 395",
+        city: "Drogenbos",
+        country: "Belgium",
+        postal_code: "1620",
+        phone: "+32 2 371 79 11",
+        email: "info@pcb.porsche.be"
+      },
+      {
+        name: "Porsche Centrum East-Flanders",
+        latitude: 51.009278,
+        longitude: 3.627019,
+        address: "Kortrijksesteenweg 11",
+        city: "Sint-Martens-Latem",
+        country: "Belgium",
+        postal_code: "9830",
+        phone: "+32 9 282 24 22",
+        email: "porsche@carreramotors.be"
+      },
+      {
+        name: "Porsche Centre Antwerpen",
+        latitude: 51.202025,
+        longitude: 4.468582,
+        address: "Uilenbaan 200B",
+        city: "Wommelgem",
+        country: "Belgium",
+        postal_code: "B-2160",
+        phone: "+32 3 224 19 11",
+        email: "info@pcb.porsche.be"
+      },
+      {
+        name: "Centre Porsche Paris Levallois",
+        latitude: 48.881030,
+        longitude: 2.283145,
+        address: "17 Rue Gros",
+        city: "Paris",
+        country: "France",
+        postal_code: "75016",
+        phone: "+33 1 49 68 34 34",
+        email: "contact.centresporscheparis@porsche.fr"
+      },
+      {
+        name: "Centre Porsche Monaco",
+        latitude: 43.737344,
+        longitude: 7.420231,
+        address: "13 Bd Charles III",
+        city: "Monaco",
+        country: "Monaco",
+        postal_code: "06240",
+        phone: "+377 97 98 13 13",
+        email: "contact@porsche-monaco.fr"
+      },
+      {
+        name: "Centre Porsche Bordeaux",
+        latitude: 44.803452,
+        longitude: -0.658932,
+        address: "18 Av. Antoine Becquerel",
+        city: "Pessac",
+        country: "France",
+        postal_code: "33600",
+        phone: "+33 5 56 46 70 70",
+        email: "contact@porsche-bordeaux.fr"
+      },
+      {
+        name: "Porsche Centre Oslo",
+        latitude: 59.902171,
+        longitude: 10.819209,
+        address: "Ryenstubben 9-11",
+        city: "Oslo",
+        country: "Norway",
+        postal_code: "06794",
+        phone: "+47 22 64 49 11",
+        email: "post@porsche-oslo.no"
+      },
+      {
+        name: "Porsche Centre Bergen",
+        latitude: 60.305691,
+        longitude: 5.210460,
+        address: "Kokstaddalen 23",
+        city: "Kokstad",
+        country: "Norway",
+        postal_code: "5257",
+        phone: "+47 55 16 16 16",
+        email: "post@porsche-bergen.no"
+      },
+      {
+        name: "Porsche Centre Trondheim",
+        latitude: 63.363815,
+        longitude: 10.416740,
+        address: "Vestre Rosten 73",
+        city: "Heimdal",
+        country: "Norway",
+        postal_code: "7072",
+        phone: "+47 40 69 95 00",
+        email: "post@porsche-trondheim.no"
+      },
+      {
+        name: "Porsche Center Helsinki",
+        latitude: 60.199970,
+        longitude: 24.942660,
+        address: "Mannerheimintie 113",
+        city: "Helsinki",
+        country: "Finland",
+        postal_code: "00280",
+        phone: "+358 9 525 991",
+        email: "info@porsche-helsinki.fi"
+      }
+    ];
+    //  dealers database end 
+
+
+    // map start
+    var map = L.map('map').setView([52.379189, 4.899431], 10);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+      maxZoom: 18
+    }).addTo(map);
+
+    for (var i = 0; i < dealers.length; i++) {
+      var dealer = dealers[i];
+      var marker = L.marker([dealer.latitude, dealer.longitude]).addTo(map);
+      marker.bindPopup(
+        "<b>" + dealer.name + "</b><br>" +
+        dealer.address + "<br>" +
+        dealer.city + ", " + dealer.postal_code + "<br>" +
+        dealer.country + "<br>" +
+        "Phone: " + dealer.phone + "<br>" +
+        "Email: " + dealer.email
+      );
+    }
+    // map end
+  </script>
+</body>
+
+</html>

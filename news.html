@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/b09c09de6f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Porsche News</title>
+  <link rel="stylesheet" href="news.css">
+</head>
+
+<body>
+  <!-- Navbar start -->
+  <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-white">
+    <div class="container">
+      <a href="home.html" class="navbar-brand mb-0 h3 d-flex align-items-center">
+        <img class="d-inline-block" src="pics/logo1.png" width="170px" height="80px" alt="Porsche Logo" />
+      </a>
+      <button type="button" data-toggle="collapse" data-target="#navbarNav" class="navbar-toggler"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown mr-3">
+            <a href="#" class="nav-link active dropdown-toggle" id="navbardropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              Models
+            </a>
+            <!-- Pictures dropdown start -->
+            <ul class="dropdown-menu scrollable-dropdown" aria-labelledby="navbardropdown">
+              <li>
+                <a href="718.html" class="dropdown-item">
+                  <img src="pics/dropdown/718logo.jpeg" alt="Porsche 718" width="200" height="100">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="911.html" class="dropdown-item">
+                  <img src="pics/dropdown/911logo.jpeg" alt="Porsche 911" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="taycan.html" class="dropdown-item">
+                  <img src="pics/dropdown/taycanlogo.jpeg" alt="Porsche Taycan" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="panamera.html" class="dropdown-item">
+                  <img src="pics/dropdown/panameralogo.jpeg" alt="Porsche Panamera" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="macan.html" class="dropdown-item">
+                  <img src="pics/dropdown/macanlogo.jpeg" alt="Porsche Macan" width="196" height="90">
+                </a>
+              </li>
+              <hr>
+              <li>
+                <a href="cayenne.html" class="dropdown-item">
+                  <img src="pics/dropdown/cayennelogo.jpeg" alt="Porsche Cayenne" width="196" height="90">
+                </a>
+              </li>
+            </ul>
+            <!-- Pictures dropdown end -->
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="service.html" class="nav-link active">Service</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="about.html" class="nav-link active">About Us</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="dealer.html" class="nav-link active">Find a Dealer</a>
+          </li>
+          <li class="nav-item active mr-10">
+            <a href="news.html" class="nav-link active">News</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar ends here -->
+
+
+  <!-- Carousel start -->
+  <div id="newsCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <!-- Indicators for each news item -->
+      <li data-target="#newsCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#newsCarousel" data-slide-to="1"></li>
+      <li data-target="#newsCarousel" data-slide-to="2"></li>
+
+      <!-- Add more indicators as needed -->
+    </ol>
+    <div class="carousel-inner">
+      <!-- News article 1 -->
+      <div class="carousel-item active">
+        <img src="pics/news/news1.jpeg" class="d-block w-100" alt="News Image 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Barrier-free, state-of-the-art, sustainable: first Porsche Charging Lounge opens</h5>
+          <p>Porsche is planning to set up its own fast-charging stations with a premium charging experience.</p>
+          <a href="charging.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <!-- News Article 2-->
+      <div class="carousel-item">
+        <img src="pics/news/news2.jpeg" class="d-block w-100" alt="News Image 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Porsche extends its Formula E commitment</h5>
+          <p>Porsche extends its successful involvement in the ABB FIA Formula E World Championship.</p>
+          <a href="formula.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <!-- News Article 3-->
+      <div class="carousel-item">
+        <img src="pics/news/news3.jpeg" class="d-block w-100" alt="News Image 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>The new Porsche 911 S/T: purist special-edition model marks 60th anniversary of the 911</h5>
+          <p>Porsche is celebrating the 60th anniversary of the 911 with a special edition built for maximum driving
+            enjoyment.</p>
+          <a href="anniversary.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+      <!-- Add more news articles as needed -->
+    </div>
+    <a class="carousel-control-prev" href="#newsCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#newsCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!-- Carousel end -->
+
+  <!-- News content start -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="mb-4">Latest News</h1>
+        <div class="row">
+          <!-- News article 1 -->
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="pics/news/article1.jpeg" class="card-img-top" alt="News Image 1">
+              <div class="card-body">
+                <h5 class="card-title">New activities for children at the Porsche Museum</h5>
+                <p class="card-text">Tom Targa and Tina Turbo will help children discover the Porsche Museum's permanent
+                  exhibition via 12 interactive stages.</p>
+                <a href="kids.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- News article 2 -->
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="pics/news/article4.jpeg" class="card-img-top" alt="News Image 2">
+              <div class="card-body">
+                <h5 class="card-title">Porsche Mission X: yet another dream takes shape'.</h5>
+                <p class="card-text">Mission X is a spectacular reinterpretation of a hypercar, with a high-performance,
+                  efficient electric powertrain.</p>
+                <a href="hypercar.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- News article 3-->
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="pics/news/article3.jpeg" class="card-img-top" alt="News Image 2">
+              <div class="card-body">
+                <h5 class="card-title">Live show with many dreams celebrating '75 Years of Porsche Sports Cars'.</h5>
+                <p class="card-text">Yesterday, the sports car manufacturer celebrated its exemplary success story in
+                  five facts</p>
+                <a href="live.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+          <!-- News article 4 -->
+          <div class="col-md-6">
+            <div class="card mb-4">
+              <img src="pics/news/article2.jpeg" class="card-img-top" alt="News Image 2">
+              <div class="card-body">
+                <h5 class="card-title">Sally Carrera and Lightning McQueen to reunite after more than a decade at
+                  Rennsport Reunion 7.</h5>
+                <p class="card-text">The full-size life characters are set to be together once again for the unique
+                  motorsport celebration.</p>
+                <a href="sally.html" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add more news articles as needed -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- News content end -->
+
+  <!-- gray box start-->
+  <div class="box">
+    <div class="contact-section">
+      <h3>Contact Us</h3>
+      <p>Phone:  +44 3457 911 911</p>
+      <p>Email: contact@porsche.co.uk</p>
+      <p>
+        Porsche Cars UK<br>
+        83 Piccadilly<br>
+        London W1J 8JA<br>
+        United Kingdom
+      </p>
+    </div>
+    <div class="opening-hours-section">
+      <h3>Standard Opening Hours</h3>
+      <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+      <p>Saturday: 10:00 AM - 4:00 PM</p>
+      <p>Sunday: Closed</p>
+      <div class="socials-section">
+        <h3>Socials</h3>
+        <div class="social-media-icons">
+          <a href="https://www.facebook.com/Porsche" class="social-icon"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/Porsche" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/porsche/" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/porsche/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+          <a href="https://www.youtube.com/user/Porsche" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="https://www.pinterest.com/porsche/" class="social-icon"><i class="fab fa-pinterest"></i></a>
+          <a href="https://www.snapchat.com/add/porsche" class="social-icon"><i class="fab fa-snapchat"></i></a>
+          <a href="https://www.tiktok.com/@porsche" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- gray box end -->
+
+  <!-- footer start-->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2023 Porsche. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
